@@ -31,7 +31,7 @@ class Scraper
     end
     student = {
       :twitter => twitter,
-      :linkedin => linkedin
+      :linkedin => linkedin,
       :github => github,
       :profile_quote => doc.css(".vitals-container .vitals-text-container .profile-quote").text,
       :bio => doc.css(".details-container .description-holder p").text
