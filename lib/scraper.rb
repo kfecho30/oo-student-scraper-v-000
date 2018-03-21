@@ -19,7 +19,7 @@ class Scraper
     html = open(profile_url)
     doc = Nokogiri::HTML(html)
     student = {
-      :blog => profile_url,
+      :profile_quote => doc.css(".vitals-container .vitals-text-container .profile-quote")
       :bio => doc.css(".details-container .description-holder p").text
     }
   end
