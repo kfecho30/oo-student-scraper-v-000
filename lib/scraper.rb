@@ -18,7 +18,7 @@ class Scraper
   def self.scrape_profile_page(profile_url)
     html = open(profile_url)
     doc = Nokogiri::HTML(html)
-    social = (".vitals-container .social-icon-container a").href
+    social = (".vitals-container .social-icon-container a").href,
     student = {
       :twitter => social,
       :profile_quote => doc.css(".vitals-container .vitals-text-container .profile-quote").text,
