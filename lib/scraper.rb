@@ -39,6 +39,7 @@ class Scraper
       :profile_quote => doc.css(".vitals-container .vitals-text-container .profile-quote").text,
       :bio => doc.css(".details-container .description-holder p").text
     }
+    student.delete_if{|k, v| v.nil?}
   end
 
 end
