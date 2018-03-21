@@ -20,7 +20,7 @@ class Scraper
     doc = Nokogiri::HTML(html)
     socials = doc.css(".vitals-container .social-icon-container a").map{|link| link['href']}
     twitter, linkedin, github = ""
-    socials.each |social| do
+    socials.each do |social|
       if social.include? "twitter"
        twitter = social
      elsif social.include? "linkedin"
