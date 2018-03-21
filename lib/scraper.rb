@@ -29,7 +29,6 @@ class Scraper
        github = social
      end
     end
-    }
     student = {
       :twitter => twitter,
       :profile_quote => doc.css(".vitals-container .vitals-text-container .profile-quote").text,
