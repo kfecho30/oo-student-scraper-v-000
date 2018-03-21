@@ -19,7 +19,7 @@ class Scraper
     html = open(profile_url)
     doc = Nokogiri::HTML(html)
     socials = doc.css(".vitals-container .social-icon-container a").map{|link| link['href']}
-    twitter, linkedin, github = ""
+    twitter, linkedin, github, blog = ""
     socials.each do |social|
       if social.include? "twitter"
        twitter = social
@@ -27,6 +27,8 @@ class Scraper
        linkedin = social
      elsif social.include? "github"
        github = social
+     else
+       blog = social
      end
     end
     student = {
