@@ -19,7 +19,7 @@ class Scraper
     html = open(profile_url)
     doc = Nokogiri::HTML(html)
     socials = doc.css(".vitals-container .social-icon-container a").map{|link| link['href']}
-    twitter = ""
+    twitter, linkedin = ""
 
     student = {
       :twitter => socials,
