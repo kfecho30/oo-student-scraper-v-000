@@ -33,6 +33,7 @@ class Scraper
       :twitter => twitter,
       :linkedin => linkedin,
       :github => github,
+      :blog => profile_url,
       :profile_quote => doc.css(".vitals-container .vitals-text-container .profile-quote").text,
       :bio => doc.css(".details-container .description-holder p").text
     }
