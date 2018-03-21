@@ -35,7 +35,6 @@ class CommandLineInteface
       puts "  github:".colorize(:light_blue) + " #{student.github}"
       puts "  blog:".colorize(:light_blue) + " #{student.blog}"
       puts "----------------------".colorize(:magenta)
-      puts String.colors
     end
   end
 end
